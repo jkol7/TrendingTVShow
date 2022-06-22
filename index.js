@@ -3,7 +3,7 @@ const url = 'https://api.themoviedb.org/3/trending/tv/day?api_key=9a9ba9f5d574cc
 const showUrl = 'https://api.themoviedb.org/3/tv/'
 
 let headingCollection = document.querySelectorAll('h4')
-let imageCollection = document.querySelectorAll('img')
+let imageCollection = document.querySelectorAll('section.card > img')
 let idArr = []
 
 fetch(url)
