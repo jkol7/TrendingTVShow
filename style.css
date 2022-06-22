@@ -6,6 +6,10 @@ html{
 
 }
 
+a {
+    text-decoration: none;
+}
+
 header{
     margin-top: 40px;
     display: flex;
@@ -56,6 +60,7 @@ transition: transform 0.2s ease-in;
 }
 
 header img {
+    margin-top: 8px;
     max-width: 75px;
     max-height: 75px;
 }
@@ -83,7 +88,7 @@ h6 {
 }
 
 
-@media all and (max-width: 480px){
+@media all and (max-width: 530px){
     
     
     header {
