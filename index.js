@@ -1,52 +1,148 @@
 const url = 'https://api.themoviedb.org/3/trending/tv/day?api_key=9a9ba9f5d574cc3cf69f3615a1f424e0'
 
-const showUrl = 'https://api.themoviedb.org/3/tv/'
+const showURL = 'https://api.themoviedb.org/3/tv/'
 
 let headingCollection = document.querySelectorAll('h4')
-let imageCollection = document.querySelectorAll('section.card > img')
-let idArr = []
+let imageCollection = document.querySelectorAll('img.poster')
+let imageNetworkCollection = document.querySelectorAll('img.networkIMG')
+
+let networkArr = []
+let networkArrImg = []
+
+let firstData;
+
+
 
 fetch(url)
-      .then(res => res.json()) // parse response as JSON
+    .then(res => res.json()) 
+      .then(data => {
+        console.log(data)
+          firstData = data
+          return fetch(showURL + data.results[0].id + '?api_key=9a9ba9f5d574cc3cf69f3615a1f424e0&language=en-US');
+
+        })
+
+
+
+      /* Fetches to call new API URL
+      This is a separate call than original url
+      Requires the show ID pulled from url to call */
+      
+      
+    .then(res => res.json()) 
+      .then(data => {
+        console.log(data)
+        networkArrImg.push(data.networks[0].logo_path)
+        return fetch(showURL + firstData.results[1].id + '?api_key=9a9ba9f5d574cc3cf69f3615a1f424e0&language=en-US');
+
+      })
+
+      .then(res => res.json()) 
+      .then(data => {
+        networkArrImg.push(data.networks[0].logo_path)
+        return fetch(showURL + firstData.results[2].id + '?api_key=9a9ba9f5d574cc3cf69f3615a1f424e0&language=en-US');
+
+      })
+
+      .then(res => res.json()) 
+      .then(data => {
+        networkArrImg.push(data.networks[0].logo_path)
+        return fetch(showURL + firstData.results[3].id + '?api_key=9a9ba9f5d574cc3cf69f3615a1f424e0&language=en-US');
+
+      })
+
+      .then(res => res.json()) 
+      .then(data => {
+        networkArrImg.push(data.networks[0].logo_path)
+        return fetch(showURL + firstData.results[4].id + '?api_key=9a9ba9f5d574cc3cf69f3615a1f424e0&language=en-US');
+
+      })
+
+
+      .then(res => res.json()) 
+      .then(data => {
+        networkArrImg.push(data.networks[0].logo_path)
+        return fetch(showURL + firstData.results[5].id + '?api_key=9a9ba9f5d574cc3cf69f3615a1f424e0&language=en-US');
+
+      })
+
+      .then(res => res.json()) 
+      .then(data => {
+        networkArrImg.push(data.networks[0].logo_path)
+        return fetch(showURL + firstData.results[7].id + '?api_key=9a9ba9f5d574cc3cf69f3615a1f424e0&language=en-US');
+
+      })
+
+      .then(res => res.json()) 
+      .then(data => {
+        networkArrImg.push(data.networks[0].logo_path)
+        return fetch(showURL + firstData.results[8].id + '?api_key=9a9ba9f5d574cc3cf69f3615a1f424e0&language=en-US');
+
+      })
+
+      .then(res => res.json()) 
+      .then(data => {
+        networkArrImg.push(data.networks[0].logo_path)
+        return fetch(showURL + firstData.results[9].id + '?api_key=9a9ba9f5d574cc3cf69f3615a1f424e0&language=en-US');
+
+      })
+
+
+      .then(res => res.json()) 
+      .then(data => {
+        networkArrImg.push(data.networks[0].logo_path)
+        return fetch(showURL + firstData.results[10].id + '?api_key=9a9ba9f5d574cc3cf69f3615a1f424e0&language=en-US');
+
+      })
+
+
+      .then(res => res.json()) 
+      .then(data => {
+        networkArrImg.push(data.networks[0].logo_path)
+        return fetch(showURL + firstData.results[11].id + '?api_key=9a9ba9f5d574cc3cf69f3615a1f424e0&language=en-US');
+
+      })
+
+      .then(res => res.json()) 
+      .then(data => {
+        networkArrImg.push(data.networks[0].logo_path)
+        return fetch(showURL + firstData.results[12].id + '?api_key=9a9ba9f5d574cc3cf69f3615a1f424e0&language=en-US');
+
+      })
+
+      .then(res => res.json()) 
+      .then(data => {
+        networkArrImg.push(data.networks[0].logo_path)
+        return fetch(showURL + firstData.results[13].id + '?api_key=9a9ba9f5d574cc3cf69f3615a1f424e0&language=en-US');
+
+      })
+
+
+      /* Begin adding to the DOM */
+
+
+      .then(res => res.json()) 
       .then(data => {
         
-  
 
-       
-        let idArr = []
+        networkArrImg.forEach((obj,i) => {imageNetworkCollection[i].src = 'https://image.tmdb.org/t/p/w500' + networkArrImg[i]})
 
-        //Adds TV image, title to the DOM
-        data.results.forEach((obj, i) => {
+        firstData.results.forEach((obj, i) => {
           
           headingCollection[i].innerText = obj.name
           imageCollection[i].src = 'https://image.tmdb.org/t/p/w500/' + obj.poster_path
-          idArr.push(obj.id)
-          console.log(idArr)
           
-        }
-      )
-    
-    }   
-      )
+        })
+
+  
+      })
+      
+      
+
+
+
       .catch(err => {
           console.log(`error ${err}`)
-      }
-
-      
-      );
-
-     
+      });
 
 
-
-/*
-        
-        fetch(showUrl + idArr[0] + 'api_key=9a9ba9f5d574cc3cf69f3615a1f424e0')
-        .then(res => res.json()) // parse response as JSON
-        .then(data => {
-  
-          console.log(data.homepage)
-        } 
-      
-      )
-      }   */
