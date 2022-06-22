@@ -4,6 +4,7 @@ const showUrl = 'https://api.themoviedb.org/3/tv/'
 
 let headingCollection = document.querySelectorAll('h4')
 let imageCollection = document.querySelectorAll('img')
+let idArr = []
 
 fetch(url)
       .then(res => res.json()) // parse response as JSON
@@ -19,16 +20,22 @@ fetch(url)
           
           headingCollection[i].innerText = obj.name
           imageCollection[i].src = 'https://image.tmdb.org/t/p/w500/' + obj.poster_path
-          idArr[i] = obj.id
+          idArr.push(obj.id)
+          console.log(idArr)
           
         }
       )
-      
+    
     }   
       )
       .catch(err => {
           console.log(`error ${err}`)
-      });
+      }
+
+      
+      );
+
+     
 
 
 
