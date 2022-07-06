@@ -157,14 +157,14 @@ fetch(url)
       .then(res => res.json()) 
       .then(data => {
         
-        console.log(linkArr)
+   
         networkArrImg.forEach((obj,i) => {imageNetworkCollection[i].src = 'https://image.tmdb.org/t/p/w500' + networkArrImg[i]})
         linkArr.forEach((obj,i) => {linkCollection[i].href = linkArr[i]})
 
 
         firstData.results.forEach((obj, i) => {
 
-          headingCollection[i].innerText = obj.name
+          headingCollection[i].innerText = [i + 1] + '. ' + obj.name
           imageCollection[i].src = 'https://image.tmdb.org/t/p/w500/' + obj.poster_path
         })
 
