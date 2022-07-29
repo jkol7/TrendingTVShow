@@ -126,6 +126,11 @@ footer img {
 }
 
 
+   .hide {
+
+            display: none
+        }
+
 
 @media all and (max-width: 530px){
     
@@ -200,5 +205,8 @@ footer img {
         footer img {
             max-width: 150px;
         }
+
+
+
         
 }
