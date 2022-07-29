@@ -32,12 +32,13 @@ for (let i = 0; i < 12; i++){
   .then(data => 
     {
 
+      console.log(data.homepage)
       //Checks if there is a logo for the network in the data. If there isn't, it will result in a 404. Instead it will hide the logo.
       data.networks[0] ? trendingShowNetworks.push(data.networks[0].logo_path) : trendingShowNetworks.push("notfound")
       trendingShowNetworks[i].includes('notfound') ? imageNetworkCollection[i].classList.add('hide') : imageNetworkCollection[i].src = 'https://image.tmdb.org/t/p/w500' + `${trendingShowNetworks[i]}` 
       
       
-      linkCollection[i].href = `${trendingShowLinks[i]}`
+    linkCollection[i].href = `${data.homepage}`
       
     }
     
@@ -45,8 +46,6 @@ for (let i = 0; i < 12; i++){
   
   }
 
-  }).catch(
-
-    console.log(error)
-    
-)
+  }
+  
+  )
