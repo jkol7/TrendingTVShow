@@ -11,7 +11,6 @@ let trendingShowNames, trendingShowImages, trendingShowIDs
 let trendingShowLinks = [], trendingShowNetworks = []
 
 
-
 fetch(trendingShowsURL)
   .then(res => res.json())
   .then(data => {
