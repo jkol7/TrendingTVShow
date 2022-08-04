@@ -15,4 +15,4 @@ The app connects to the TMDB API by first connecting to the URL for today's top 
 
 <b>Optimizations:</b>
 
-The first version of this had tons of ".then" statements and resulted in a very long document of code. This was because of the trickiness of first needing the data from the first URL before calling the others. Without getting the 12 ids from the first URL I was unable to get more detailed data for each show. By utilizing the .map method and for loops through the fetch, I was able to cut down on the .then code. I also handled some cases where data was not available like in the network images with ternary operations.
+I cut down on code by implementing more .map methods. The data that needs to be accessed from the trending API is a different URL from each individual show, so I needed to get each show URL to get more specific data. This runs smoother with multiple fetches. I also increased the max-width and height for the cards after seeing over time that there are some long titles and bigger poster images.
