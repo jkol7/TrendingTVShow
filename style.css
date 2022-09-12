@@ -1,213 +1,185 @@
-html{
-
-    font-size: 2rem;
-    font-family: 'Franklin Gothic Light', Arial, Helvetica, sans-serif;
-    background: linear-gradient(260deg, #a3332f, rgb(0, 0, 0))
-
+html {
+  font-size: 2rem;
+  font-family: "Franklin Gothic Light", Arial, Helvetica, sans-serif;
+  background: linear-gradient(260deg, #a3332f, rgb(0, 0, 0));
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-header{
-    margin-top: 40px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5%;
+header {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5%;
 }
 
-main{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    text-align:center;
-    flex-wrap: wrap;
-    margin: 0 300px 50px 300px;
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-align: center;
+  flex-wrap: wrap;
+  margin: 0 300px 50px 300px;
 }
-
 
 footer {
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 40px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px 50px;
 }
 .card {
-    background-color: rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
-    max-width: 360px;
-    max-height: 700px;
-margin-top: 50px;
-padding: 10px 10px 20px 10px;
-box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-transition: transform 0.2s ease-in;
-
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  max-width: 360px;
+  max-height: 700px;
+  margin-top: 50px;
+  padding: 10px 10px 20px 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in;
 }
 
-.card:hover{
-    transform: translateY(-15px);
+.card:hover {
+  transform: translateY(-15px);
 }
 
-.poster{
-
-    max-width: 360px;
-    max-height: 546px;
-    margin: 10px 10px 10px 10px;
+.poster {
+  max-width: 340px;
+  max-height: 546px;
+  margin: 10px 10px 10px 10px;
 }
 
-
-.networkIMG  {
-    margin-top: 20px;
-    max-width: 75px;
-    max-height: 30px;
+.networkIMG {
+  margin-top: 20px;
+  max-width: 75px;
+  max-height: 30px;
 }
 
 header img {
-    margin-top: 8px;
-    max-width: 75px;
-    max-height: 75px;
-    filter: invert();
+  margin-top: 8px;
+  max-width: 75px;
+  max-height: 75px;
+  filter: invert();
 }
 
 h1 {
-
-    color: white;
-    font-size: 1.5rem;
-    text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
 }
 
 .subHead h3 {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    color:rgba(255, 255, 255, 0.797);
-    font-weight: 10;
-    font-family: "Franklin Gothic Light";
-    margin-top: 10px;
-    font-size: 22px;
-    
-
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.797);
+  font-weight: 10;
+  font-family: "Franklin Gothic Light";
+  margin-top: 10px;
+  font-size: 22px;
 }
-h4{
-
-    font-weight: 200;
-    color: white;
-    margin: 10px 0 0 0;
-    font-size: .8rem;
+h4 {
+  font-weight: 200;
+  color: white;
+  margin: 10px 0 0 0;
+  font-size: 0.8rem;
 }
 
 h6 {
-    color: rgba(255, 255, 255, 0.879);
-    font-weight: lighter;
-    margin: 10px;
-    padding: 0;
+  color: rgba(255, 255, 255, 0.879);
+  font-weight: lighter;
+  margin: 10px;
+  padding: 0;
 }
 
 footer p {
-    
-color: white;
-color:rgba(255, 255, 255, 0.797);
-    font-weight: 10;
-    font-family: "Franklin Gothic Light";
-    font-size: 16px;
+  color: white;
+  color: rgba(255, 255, 255, 0.797);
+  font-weight: 10;
+  font-family: "Franklin Gothic Light";
+  font-size: 16px;
 }
 
 footer p a {
-    color:rgba(255, 255, 255, 0.797);
-
+  color: rgba(255, 255, 255, 0.797);
 }
 
 footer img {
-    max-width: 180px;
+  max-width: 180px;
 }
 
+.hide {
+  display: none;
+}
 
-   .hide {
+@media all and (max-width: 530px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
 
-            display: none
-        }
+  h1 {
+    margin-top: 5px;
+  }
 
+  .subHead {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  main {
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+  }
 
-@media all and (max-width: 530px){
-    
-    
-    header {
+  .card {
+    margin: 10px;
+    padding: 10px;
+    width: 190px;
+  }
 
+  header img {
+    max-width: 50px;
+    max-height: 50px;
+  }
+  .poster {
+    max-width: 150px;
+    max-height: 300px;
+  }
 
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-      
-    }
+  h1 {
+    font-size: 1rem;
+  }
+  h4 {
+    font-size: 0.5rem;
+  }
 
-    h1 {
-        margin-top: 5px;
-    }
+  .subHead h3 {
+    font-size: 0.5rem;
+  }
 
-    .subHead {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    main{
-        flex-direction: column;
-        align-items: center;
-        flex-wrap: wrap;
-        margin: 0;
-        }
+  footer p {
+    color: white;
+    color: rgba(255, 255, 255, 0.797);
+    font-weight: 10;
+    font-family: "Franklin Gothic Light";
+    font-size: 15px;
+  }
 
-        .card {
-            margin: 10px;
-            padding: 10px;
-            max-width: 280px;
-        }
+  footer p a {
+    color: rgba(255, 255, 255, 0.797);
+  }
 
-        header img {
-            max-width: 50px;
-            max-height: 50px;
-        }
-        .poster{
-            max-width: 150px;
-            max-height: 300px;
-        }
-        
-    h1{
-        font-size: 1rem;
-    }
-    h4{
-        font-size: .5rem;
-    }
-
-    .subHead h3{
-        font-size: .5rem;
-    }
-
-
-    footer p {
-    
-        color: white;
-        color:rgba(255, 255, 255, 0.797);
-            font-weight: 10;
-            font-family: "Franklin Gothic Light";
-            font-size: 15px;
-        }
-        
-        footer p a {
-            color:rgba(255, 255, 255, 0.797);
-        
-        }
-        
-        footer img {
-            max-width: 150px;
-        }
-
-
-
-        
+  footer img {
+    max-width: 150px;
+  }
 }
